@@ -24,7 +24,17 @@ header { background: #004aad; color: #fff; padding: 1rem 0; }
 
 /* About */
 .about-content { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
-.about-image { flex: 1; height: 250px; background: #ddd; border-radius: 10px; }
+.about-image { .about-image {
+  flex: 1;
+  height: 250px;
+  background: #ffffff; /* pure white */
+  border-radius: 10px;
+  padding: 15px; /* spacing around illustration */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ }
 .about-content p { flex: 2; font-size: 1.1rem; }
 
 /* Services */
@@ -178,8 +188,12 @@ section.show {
 .why-img {
   width: 100%;
   height: 120px;
-  background: #ddd;
+  background: #ffffff; /* pure white */
   border-radius: 8px;
+  padding: 10px; /* optional: adds spacing inside the box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* How It Works */
@@ -237,4 +251,16 @@ section.show {
   }
 }
 
+/* Make all section images responsive inside placeholders */
+.hero-image img,
+.about-image img,
+.why-img img,
+.step-img img,
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps full illustration visible */
+  border-radius: 8px;  /* matches your card styling */
+  display: block;
+}
 
