@@ -121,31 +121,38 @@ footer { background: #004aad; color: #fff; text-align: center; padding: 1rem; ma
 }
 
 /* Mobile navbar */
+/* Mobile navbar */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
     background: #002147;
     position: absolute;
-    top: 60px;
-    right: 10px;
+    top: 60px; /* just below header */
+    right: 15px;
     width: 200px;
     padding: 15px;
     border-radius: 8px;
+    z-index: 1000; /* make sure it’s above everything */
   }
+
   .nav-links.active {
-    display: flex;
+    display: flex; /* shows when toggled */
   }
-  .navbar {
-    justify-content: space-between;
-  }
+
   .menu-toggle {
     display: block;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fff;
+    margin-left: 15px;
+  }
+
+  .navbar {
+    position: relative; /* so dropdown stays inside header */
   }
 }
+
 
 /* Smooth fade-in animation */
 section {
